@@ -4,11 +4,13 @@ const { musicAccessories, musicBrands } = require("./musicData");
 
 const resolvers = {
   Query: {
-    brands: () => musicBrands,
+    accessories: () => musicAccessories,
   },
-  Brand: {
-    accessories: (accessory) =>
-      musicAccessories.filter((brand) => accessory.id === brand.brandId),
+  MusicAccessories: {
+    brands: (parent) => {
+      const isBrandInAccessory = (brand) => brand.id === parent.brandId;
+      return musicBrands.filter(isBrandInAccessory);
+    },
   },
 };
 

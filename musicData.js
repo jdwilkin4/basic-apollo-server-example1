@@ -1,3 +1,18 @@
+const musicBrands = [
+  {
+    id: 1,
+    brandName: "D'Addario",
+  },
+  {
+    id: 2,
+    brandName: "Fender",
+  },
+  {
+    id: 3,
+    brandName: "Zildjian",
+  },
+];
+
 const musicAccessories = [
   {
     id: 1,
@@ -34,20 +49,6 @@ const musicAccessories = [
     product: "Black Deluxe Drum Rug",
     price: 144.99,
     brandId: 3,
-  },
-];
-const musicBrands = [
-  {
-    id: 1,
-    brandName: "D'Addario",
-  },
-  {
-    id: 2,
-    brandName: "Fender",
-  },
-  {
-    id: 3,
-    brandName: "Zildjian",
   },
 ];
 

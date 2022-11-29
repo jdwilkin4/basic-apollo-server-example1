@@ -1,21 +1,21 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-  type Accessory {
-    id: ID!
-    product: String!
-    price: Float
-    brandId: ID!
-  }
-
-  type Brand {
+  type MusicBrand {
     id: ID!
     brandName: String
-    accessories: [Accessory]
+  }
+
+  type MusicAccessories {
+    id: ID!
+    product: String
+    price: Float
+    brandId: Int
+    brands: [MusicBrand]
   }
 
   type Query {
-    brands: [Brand]
+    accessories: [MusicAccessories]
   }
 `;
 
