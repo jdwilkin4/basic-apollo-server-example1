@@ -1,6 +1,8 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
+  scalar USCurrency
+
   type MusicBrand {
     id: ID!
     brandName: String
@@ -9,7 +11,7 @@ const typeDefs = gql`
   type MusicAccessories {
     id: ID!
     product: String
-    price: Float
+    price: USCurrency
     brandId: Int
     brands: [MusicBrand]
   }

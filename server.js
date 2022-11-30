@@ -1,8 +1,10 @@
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./typeDefs");
 const { musicAccessories, musicBrands } = require("./musicData");
+const { USCurrency } = require("graphql-currency-scalars");
 
 const resolvers = {
+  USCurrency,
   Query: {
     accessories: () => musicAccessories,
   },

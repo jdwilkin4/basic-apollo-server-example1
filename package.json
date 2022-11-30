@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.11.1",
+    "graphql-currency-scalars": "^0.0.1",
     "nodemon": "^2.0.20"
   }
 }
